@@ -39,7 +39,13 @@ return {
       },
     },
     keys = {
-      { "<leader>sg", function() Snacks.picker.grep() end, desc = "Grep (respects gitignore, case insensitive)" },
+      {
+        "<leader>sg",
+        function()
+          Snacks.picker.grep()
+        end,
+        desc = "Grep (respects gitignore, case insensitive)",
+      },
     },
   },
 
@@ -48,6 +54,14 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       inlay_hints = { enabled = false },
+    },
+  },
+
+  -- Lua line
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      theme = "everforest",
     },
   },
 }
