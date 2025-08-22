@@ -56,12 +56,4 @@ return {
       inlay_hints = { enabled = false },
     },
   },
-
-  -- Lua line
-  {
-    "nvim-lualine/lualine.nvim",
-    opts = {
-      theme = "everforest",
-    },
-  },
 }
