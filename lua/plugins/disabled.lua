@@ -19,8 +19,15 @@ return {
       },
       picker = {
         enabled = true,
-        hidden = true,
-        ignored = true,
+        hidden = false,
+        ignored = false,
+        grep = {
+          respect_gitignore = true,
+          case_sensitive = false,
+        },
+        find = {
+          respect_gitignore = true,
+        },
       },
       quickfile = { enabled = true },
       scope = { enabled = true },
@@ -30,6 +37,9 @@ return {
       styles = {
         notification = {},
       },
+    },
+    keys = {
+      { "<leader>sg", function() Snacks.picker.grep() end, desc = "Grep (respects gitignore, case insensitive)" },
     },
   },
 
